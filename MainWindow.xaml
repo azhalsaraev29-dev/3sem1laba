@@ -1,23 +1,34 @@
-﻿<Window x:Class="_3sem1laba.MainWindow"
+<Window x:Class="_3sem1laba.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:_3sem1laba"
-        mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Canvas x:Name="Scene" HorizontalAlignment="Left" Height="154"
-VerticalAlignment="Top" Width="426" Margin="186,228,0,0">
-        </Canvas>
-        <Button Content="Произвольный&#xD;&#xA;прямоугольник" Height="51" Canvas.Left="94" Canvas.Top="56" Width="140" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.499,0.445" Margin="0,50,0,0"/>
-        <Button Content="Произвольный&#xD;&#xA; треугольник" Height="50" Canvas.Left="270" Canvas.Top="56" Width="140" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Button_Click" RenderTransformOrigin="0.497,-2.8" Margin="141,51,0,0"/>
-        <Button Content="Квадрат" Height="51" Width="140" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="518,50,0,0"/>
-        <Slider Height="16" Width="310" RenderTransformOrigin="0.499,-2.125" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="244,133,0,0" ValueChanged="Slider_ValueChanged"/>
-        <Slider Height="15" Width="309" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="245,195,0,0"/>
+                VerticalAlignment="Top" Width="426" Margin="186,228,0,0"/>
+
+        <Button Content="Произвольный прямоугольник" Height="50" Width="140"
+        HorizontalAlignment="Left" VerticalAlignment="Top" Margin="94,56,0,0"
+        Click="ButtonRectangle_Click"/>
+
+        <Button Content="Произвольный треугольник" Height="50" Width="140"
+        HorizontalAlignment="Left" VerticalAlignment="Top" Margin="270,56,0,0"
+        Click="ButtonTriangle_Click"/>
+
+        <Button Content="Квадрат" Height="50" Width="140"
+        HorizontalAlignment="Left" VerticalAlignment="Top" Margin="455,56,0,0"
+        Click="ButtonSquare_Click"/>
+
+        <Slider x:Name="SliderX" Height="16" Width="310" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="244,133,0,0"
+                Minimum="-200" Maximum="200" ValueChanged="SliderX_ValueChanged"/>
+
+        <Slider x:Name="SliderY" Height="15" Width="310" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="245,195,0,0"
+                Minimum="-200" Maximum="200" ValueChanged="SliderY_ValueChanged"/>
+
         <TextBox Height="44" TextWrapping="Wrap" Text="Сдвиг по X:" Width="106" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="52,127,0,0"/>
-        <TextBox Height="44" TextWrapping="Wrap" Text="Сдвиг по Y" Width="106" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="52,0,0,0"/>
-        <Button Content="Очистить                " HorizontalAlignment="Left" Height="25" Margin="697,76,0,0" VerticalAlignment="Top" Width="72" Click="Button_Click_1"/>
+
+        <TextBox Height="44" TextWrapping="Wrap" Text="Сдвиг по Y:" Width="106" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="52,188,0,0"/>
+
+        <Button Content="Очистить" HorizontalAlignment="Left" Height="25" Width="72" Margin="697,76,0,0" VerticalAlignment="Top" Click="ButtonClear_Click"/>
 
     </Grid>
 </Window>

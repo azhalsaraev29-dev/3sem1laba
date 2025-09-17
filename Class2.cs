@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,6 +29,19 @@ namespace _3sem1laba
         public Point2D getP3()
         {
             return p3;
+        }
+        public void addX(int X)
+        {
+
+            p1.addX(X);
+            p2.addX(X);
+            p3.addX(X);
+        }
+        public void addY(int Y)
+        {
+            p1.addY(Y);
+            p2.addY(Y);
+            p3.addY(Y);
         }
 
     }

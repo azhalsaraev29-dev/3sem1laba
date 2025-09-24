@@ -124,11 +124,14 @@ namespace _3sem1laba
         private void Redraw()
         {
             ClearScene();
+
             if (tr != null)
             {
                 DrawTriangle();
-                
-                
+            }
+            else if (rect != null)
+            {
+                DrawRectangle();
             }
 
         }
